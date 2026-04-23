@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  This is a template file for reference only.
+  The actual plist is generated dynamically by install-launchd.sh
+  with the correct paths for your installation.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.websiteupdater.hourly</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/path/to/websiteupdater/run-due.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/path/to/websiteupdater</string>
+
+    <key>StandardOutPath</key>
+    <string>/path/to/websiteupdater/data/launchd.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/path/to/websiteupdater/data/launchd.log</string>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+</dict>
+</plist>

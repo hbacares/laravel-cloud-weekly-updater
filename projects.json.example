@@ -1,0 +1,28 @@
+[
+  {
+    "name": "example-site",
+    "repo_url": "git@github.com:user/example-site.git",
+    "local_path": "/dev/example-site",
+    "main_branch": "main",
+    "update_branch": "autoupdate",
+    "schedule": {
+      "day": "mon",
+      "hour": 3
+    },
+    "laravel_cloud": {
+      "project_id": "prj_abc123",
+      "main_env": "main"
+    },
+    "visual_diff": {
+      "paths": ["/", "/login", "/tests"],
+      "mask_selectors": [".live-counter", "#timestamp"],
+      "tolerance_pct": 0.5
+    },
+    "testing": {
+      "unit_test_cmd": "php artisan test",
+      "skip_unit_tests": false,
+      "npm_audit_gate": "high"
+    },
+    "enabled": true
+  }
+]
